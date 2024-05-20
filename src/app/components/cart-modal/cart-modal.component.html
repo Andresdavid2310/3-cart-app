@@ -12,7 +12,6 @@
             <cart
               [items]="items"
               (idProductEventEmitter)="onDeleteCart($event)"
-              [total]="total"
             />
             }@else {
             <div class="alert alert-warning">No hay elementos en el carro!</div>
