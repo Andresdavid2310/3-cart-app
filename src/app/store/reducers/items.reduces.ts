@@ -1,7 +1,6 @@
 import { createReducer, on } from "@ngrx/store";
-import { CartItem } from "../models/cartitem";
-import { add, remove, total } from "./items.actions";
-import { state } from "@angular/animations";
+import { CartItem } from "../../models/cartitem";
+import { add, remove, total } from "../actions/items.actions";
 
 
 export interface ItemState {

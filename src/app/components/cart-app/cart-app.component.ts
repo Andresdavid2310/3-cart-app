@@ -6,8 +6,8 @@ import { Router, RouterOutlet } from '@angular/router';
 import { SharingDataService } from '../../services/sharing-data.service';
 import Swal from 'sweetalert2'
 import { Store } from '@ngrx/store';
-import { ItemState } from '../../store/items.reduces';
-import { add, remove, total } from '../../store/items.actions';
+import { ItemState } from '../../store/reducers/items.reduces';
+import { add, remove, total } from '../../store/actions/items.actions';
 
 
 @Component({
@@ -31,6 +31,7 @@ export class CartAppComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.store.dispatch(total());
     this.onDeleteCart();
     this.onAddCart();
   }
